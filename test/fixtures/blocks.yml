@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sheet: 1
+  smoking: false
+  type: 
+
+two:
+  sheet: 1
+  smoking: false
+  type: 

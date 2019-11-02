@@ -1,0 +1,10 @@
+h1 テーブルの追加
+
+= form_with model: @block, local: true do |f|
+  .form-group
+    = f.label :sheet
+    = f.number_field :sheet, class: 'form-control',id: 'block_sheet'
+  .form-group
+    = f.label :kind
+    = f.text_field :kind, class: 'form-control', id: 'block_kind'
+  = f.submit '登録する', class: 'btn btn-primary'
