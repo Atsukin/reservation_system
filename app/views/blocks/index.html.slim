@@ -3,14 +3,16 @@ h1 テーブル一覧
 table.table.table-chromedriver
   thread.thread-default
     tr
-      th sheets
+      th 席数
       th 種類
+      th テーブル総数
       th 
   tbody
     - @blocks.each do |block|
       tr
         td= block.sheet
         td= block.kind
+        td= block.total
         td
          = link_to '編集', edit_block_path(block), class: 'btn btn-primary'
          = link_to '削除', block, method: :delete, data: {confirm: "テーブルを削除します。よろしいですか？"}, class: 'btn btn-danger'

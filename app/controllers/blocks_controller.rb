@@ -4,6 +4,16 @@ class BlocksController < ApplicationController
   end
 
   def edit
+    @block = Block.find(params[:id])
+  end
+
+  def update
+    @block = Block.find(params[:id])
+    if @block.update(block_params)
+      redirect_to blocks_url, notice: "テーブルを編集しました。"
+    else
+      render :edit
+    end
   end
 
   def new
@@ -25,6 +35,6 @@ class BlocksController < ApplicationController
   private
 
   def block_params
-    params.require(:block).permit(:sheet,:kind)
+    params.require(:block).permit(:sheet,:kind,:total)
   end
 end
