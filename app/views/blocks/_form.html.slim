@@ -1,0 +1,11 @@
+= form_with model: @block, local: true do |f|
+  .form-group
+    = f.label :sheet
+    = f.number_field :sheet, class: 'form-control',id: 'block_sheet'
+  .form-group
+    = f.label :kind
+    = f.text_field :kind, class: 'form-control', id: 'block_kind'
+  .form-group
+    = f.label :total
+    = f.number_field :total, class: 'form-control', id: 'block_total'
+  = f.submit nil, class: 'btn btn-primary'
