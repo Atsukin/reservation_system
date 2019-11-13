@@ -1,0 +1,16 @@
+h1 コースの詳細
+
+= link_to '新規登録', new_admin_course_path, class: 'btn btn-primary mb-5'
+table.table.table-chromedriver
+  thread.thread-default
+    tr
+      th コースタイトル
+      td= @course.title
+    tr
+      th コースの詳細
+      td= @course.description
+    tr
+      th コースの画像
+      td= image_tag @course.image if @course.image.attached?
+      
+= link_to 'コース一覧へ', admin_courses_path, class: 'btn btn-primary mb-5'

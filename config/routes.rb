@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admins
   namespace :admin do
     resources :blocks
+    resources :courses
     resources :bookings, only: %i(show index edit)
   end
   resources :bookings, only: [:new]
