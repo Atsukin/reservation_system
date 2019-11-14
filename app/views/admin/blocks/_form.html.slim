@@ -1,4 +1,4 @@
-= form_with model: @block, local: true do |f|
+= form_with model: [:admin, @block], local: true do |f|
   .form-group
     = f.label :sheet
     = f.number_field :sheet, class: 'form-control',id: 'block_sheet'

@@ -11,7 +11,7 @@ class Admin::BlocksController < ApplicationController
     def update
         @block = Block.find(params[:id])
         if @block.update(block_params)
-            redirect_to blocks_url, notice: "テーブルを編集しました。"
+            redirect_to admin_blocks_url, notice: "テーブルを編集しました。"
         else
             render :edit
         end
@@ -24,13 +24,19 @@ class Admin::BlocksController < ApplicationController
     def create
         block = Block.new(block_params)
         if block.save
-            redirect_to blocks_url, notice: "テーブルを登録しました。"
+            redirect_to admin_blocks_url, notice: "テーブルを登録しました。"
         else
             render :new
         end
     end
+
+    def destroy
+        Block.find(params[:id]).destroy
+        redirect_to admin_blocks_url, notice: 'テーブルを削除しました。'
+    end
     
     def show
+        @block = Block.find(params[:id])
     end
     
     private
