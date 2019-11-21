@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @courses = Booking.courses.all
+    @courses = Course.all
   end
 
   def edit

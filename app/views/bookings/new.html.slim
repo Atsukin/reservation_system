@@ -9,7 +9,7 @@ h1 予約画面
         = f.time_field :time, class: 'form-control', id: 'reservation_time'
     .form-group
         - @courses.each do |course|
-            = f.label :course, course
+            = f.label :course, course.title
             = f.radio_button :course, course.title
     #calendar
     = f.submit nil, class: 'btn-btn-parimary'
