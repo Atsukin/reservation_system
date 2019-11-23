@@ -1,8 +1,11 @@
 = form_with model: [:admin, @course], local: true do |f|
   .form-group
-    = f.label :name
-    = f.text_field :name, class: 'form-control',id: 'course_name'
+    = f.label :title
+    = f.text_field :title, class: 'form-control',id: 'course_title' 
   .form-group
-    = f.label :course_image
-    = f.file_field :course_image, class: 'form-control', id: 'course_kind'
+    = f.label :description
+    = f.text_area :description, class: 'form-control', id: 'course-description'
+  .form-group
+    = f.label :image
+    = f.file_field :image, class: 'form-control'
   = f.submit nil, class: 'btn btn-primary'

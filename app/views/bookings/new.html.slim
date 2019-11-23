@@ -1,1 +1,15 @@
-#calendar
+h1 予約画面
+
+= form_with model: @booking, local: true do |f|
+    .form-group
+        = f.label :people
+        = f.select :people, options_for_select((1..23).to_a), class: 'form-control', id: 'reservation_control'
+    .form-group
+        = f.label :time
+        = f.time_field :time, class: 'form-control', id: 'reservation_time'
+    .form-group
+        - @courses.each do |course|
+            = f.label :course, course.title
+            = f.radio_button :course, course.title
+    #calendar
+    = f.submit nil, class: 'btn-btn-parimary'
