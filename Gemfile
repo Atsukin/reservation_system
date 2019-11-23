@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'cancan'
 gem 'rails_admin'
+gem 'administrate'
+gem 'administrate'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails', '4.3.3'
 gem 'fullcalendar-rails'
