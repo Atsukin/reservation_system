@@ -17,6 +17,9 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'slim-rails'
 gem 'devise'
+gem 'administrate'
+gem 'cancan'
+
 gem 'html2slim'
 
 group :development, :test do
